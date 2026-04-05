@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbigail's Active | 1:1 Personal Training & Physique Coaching</title>
+    <meta name="description" content="Personalized 1:1 fitness coaching by Abbigail Stasiuk. Specializing in lifestyle transformation, physique building, and competition prep. No shortcuts, just results.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abbigailsactive.com/">
+    <meta property="og:title" content="Abbigail's Active | Personal Training">
+    <meta property="og:description" content="1:1 Coaching applications are now open. No shortcuts, no excuses. Longterm lifestyle.">
+    <meta property="og:image" content="https://abbigailsactive.com/images/hero-shot.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://abbigailsactive.com/">
+    <meta property="twitter:title" content="Abbigail's Active | Personal Training">
+    <meta property="twitter:description" content="1:1 Coaching applications are now open. No shortcuts, no excuses. Longterm lifestyle.">
+    <meta property="twitter:image" content="https://abbigailsactive.com/images/hero-shot.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="top-bar-container">
+            <div class="logo">
+                <h1>Abbigail's <em>Active</em></h1>
+                <span>PERSONAL TRAINING</span>
+            </div>
+
+            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf72g3XskOoSI2mPzw3Rd1dlx8DiKFmAgxVTg6_Kn3WwRZTGw/viewform" class="nav-btn">APPLY NOW!</a>
+        </div>
+    </header>
+
+    <section class="hero-container">
+        <div class="hero-box">
+            <div class="hero-bg" style="background-image: url('images/hero-shot.jpg');"></div>
+            
+            <div class="hero-inner-bounds">
+                <div class="hero-center-text">
+                    <h1>Abbigail's <br>Active</h1>
+                    <p>PERSONAL TRAINING</p>
+                </div>
+
+                <div class="hero-bottom-right">
+                    <span class="huge-text">1:1</span>
+                    <span class="small-text">COACHING<br>APPLICATIONS<br>ARE NOW OPEN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-overview" id="programs-overview">
+        <h2 class="section-title" style="text-align: center; font-size: 3.5rem; letter-spacing: 4px; margin-bottom: 0.5rem; color: var(--bg-color-main);">4 PROGRAMS:</h2>
+        <p style="text-align: center; margin-bottom: 3rem; font-weight: 300; font-style: italic;">
+            <span class="program-instruction">Click a program for more information</span>
+        </p>
+        <div class="program-grid">
+            <div class="program-card interactive-card" onclick="showProgram('prog-1')">
+                <div class="program-img" style="background-image: url('images/foundation-coaching.jpg'); filter: grayscale(100%) brightness(1.1); background-size: 112%; background-position: center 70%;"></div>
+                <h3>FOUNDATION<br>COACHING</h3>
+                <p class="program-short-desc">Designed to build consistency, confidence, and a strong foundation without extremes.</p>
+                <button class="learn-more-btn">LEARN MORE</button>
+            </div>
+            <div class="program-card interactive-card" onclick="showProgram('prog-2')">
+                <div class="program-img" style="background-image: url('images/sculpt-program.png'); background-size: cover; background-repeat: no-repeat; background-position: center; filter: grayscale(100%) brightness(1.1);"></div>
+                <h3>SCULPT & BUILD<br>COACHING</h3>
+                <p class="program-short-desc">For women who want to build a strong, lean, defined physique while maintaining a balanced lifestyle.</p>
+                <button class="learn-more-btn">LEARN MORE</button>
+            </div>
+            <div class="program-card interactive-card" onclick="showProgram('prog-3')">
+                <div class="program-img" style="background-image: url('images/prep-coaching.png'); background-position: center; filter: grayscale(100%) brightness(0.9);"></div>
+                <h3>PREP<br>COACHING</h3>
+                <p class="program-short-desc">For clients ready for serious transformation or competition prep.</p>
+                <button class="learn-more-btn">LEARN MORE</button>
+            </div>
+            <div class="program-card interactive-card" onclick="showProgram('prog-4')">
+                <div class="program-img" style="background-image: url('images/nutrition-coaching.jpg'); background-position: center 60%;"></div>
+                <h3>NUTRITION<br>COACHING</h3>
+                <p class="program-short-desc">For clients focused on improving their nutrition, relationship with food, and overall wellness.</p>
+                <button class="learn-more-btn">LEARN MORE</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <h2><span class="hover-strike">NO SHORTCUTS, NO EXCUSES.</span><br>LONGTERM LIFESTYLE.</h2>
+    </div>
+
+    <section class="personalized-programs hidden" id="programs-container">
+        <div class="prog-section-header">
+            <button class="close-btn" onclick="closePrograms()">&times; CLOSE</button>
+            <h2>PROGRAM DETAILS:</h2>
+        </div>
+
+        <!-- Program 1 -->
+        <div class="prog-detail-row hidden" id="prog-1">
+            <div class="prog-detail-title" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 0;">FOUNDATION<br>COACHING</h3>
+                <p style="margin-bottom: 0; font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; font-style: italic; max-width: 450px; line-height: 1.5; padding-left: 1.5rem; border-left: 1px solid rgba(253, 249, 242, 0.4);">Designed to build consistency, confidence, and a strong foundation without extremes.</p>
+            </div>
+            <div class="prog-detail-content">
+                <div class="prog-img-side" style="background-image: url('images/foundation-coaching.jpg'); filter: grayscale(100%) brightness(1.1); background-size: 112%; background-position: center 70%;"></div>
+                <div class="prog-text-side">
+                    <h4>What You Receive:</h4>
+                    <ul>
+                        <li>3–4 day personalized workout split</li>
+                        <li>Calorie + protein guidance</li>
+                        <li>Habit coaching (sleep, hydration, daily routine)</li>
+                        <li>Weekly accountability check-ins</li>
+                        <li>Lifestyle + wellness support</li>
+                    </ul>
+                    <div class="prog-footer">
+                        <div class="prog-footer-block">
+                            <h5>FOR WHO?</h5>
+                            <p>Anyone wanting to learn to comfortably navigate the gym and start their healthy lifestyle.</p>
+                        </div>
+                        <div class="prog-footer-block">
+                            <h5>INVESTMENT</h5>
+                            <p>$185/month<br>(Minimum 3 mos commitment)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="prog-detail-row hidden" id="prog-2">
+            <div class="prog-detail-title" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 0;">SCULPT & BUILD<br>COACHING</h3>
+                <p style="margin-bottom: 0; font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; font-style: italic; max-width: 450px; line-height: 1.5; padding-left: 1.5rem; border-left: 1px solid rgba(253, 249, 242, 0.4);">For women who want to build a strong, lean, defined physique while maintaining a balanced lifestyle.</p>
+            </div>
+            <div class="prog-detail-content">
+                <div class="prog-img-side" style="background-image: url('images/sculpt-program.png'); background-size: cover; background-repeat: no-repeat; background-position: center; filter: grayscale(100%) brightness(1.1);"></div>
+                <div class="prog-text-side">
+                    <h4>What You Receive:</h4>
+                    <ul>
+                        <li>4–5 day structured training split</li>
+                        <li>Progressive overload programming</li>
+                        <li>Fully customized macros</li>
+                        <li>Weekly in-depth check-ins</li>
+                        <li>Monthly progress assessments</li>
+                        <li>Lifestyle, recovery, and wellness coaching</li>
+                    </ul>
+                    <div class="prog-footer">
+                        <div class="prog-footer-block">
+                            <h5>FOR WHO?</h5>
+                            <p>Advanced lifters wanting to build more muscle and reduce body fat to achieve a specific physique.</p>
+                        </div>
+                        <div class="prog-footer-block">
+                            <h5>INVESTMENT</h5>
+                            <p>$200/month<br>(Minimum 3 mos commitment)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="prog-detail-row hidden" id="prog-3">
+            <div class="prog-detail-title" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 0;">PREP<br>COACHING</h3>
+                <p style="margin-bottom: 0; font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; font-style: italic; max-width: 450px; line-height: 1.5; padding-left: 1.5rem; border-left: 1px solid rgba(253, 249, 242, 0.4);">For clients ready for serious transformation or competition prep.</p>
+            </div>
+            <div class="prog-detail-content">
+                <div class="prog-img-side" style="background-image: url('images/prep-coaching.png'); background-position: center; filter: grayscale(100%) brightness(0.9);"></div>
+                <div class="prog-text-side">
+                    <h4>What You Receive:</h4>
+                    <ul>
+                        <li>Advanced training + nutrition programming</li>
+                        <li>Weekly detailed check-ins</li>
+                        <li>Monthly physique assessments</li>
+                        <li>Strategic adjustments based on progress</li>
+                        <li>High-level support and communication</li>
+                    </ul>
+                    <div class="prog-footer">
+                        <div class="prog-footer-block">
+                            <h5>FOR WHO?</h5>
+                            <p>Bodybuilders aiming to step on stage completely shredded with a balanced structure/symmetry.</p>
+                        </div>
+                        <div class="prog-footer-block">
+                            <h5>INVESTMENT</h5>
+                            <p>$250/month<br>(Minimum 6 mos commitment)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="prog-detail-row hidden" id="prog-4">
+            <div class="prog-detail-title" style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 0;">NUTRITION<br>COACHING</h3>
+                <p style="margin-bottom: 0; font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; font-style: italic; max-width: 450px; line-height: 1.5; padding-left: 1.5rem; border-left: 1px solid rgba(253, 249, 242, 0.4);">For clients focused on improving their nutrition, relationship with food, and overall wellness.</p>
+            </div>
+            <div class="prog-detail-content">
+                <div class="prog-img-side" style="background-image: url('images/nutrition-coaching.jpg'); background-position: center 60%;"></div>
+                <div class="prog-text-side">
+                    <h4>What You Receive:</h4>
+                    <ul>
+                        <li>Personalized calories + macros</li>
+                        <li>Weekly adjustments</li>
+                        <li>Grocery guidance + meal structuring</li>
+                        <li>Dining out & travel strategies</li>
+                        <li>Habit-based coaching</li>
+                    </ul>
+                    <div class="prog-footer">
+                        <div class="prog-footer-block">
+                            <h5>FOR WHO?</h5>
+                            <p>Anyone needing accountability & education surrounding diet & life changes.</p>
+                        </div>
+                        <div class="prog-footer-block">
+                            <h5>INVESTMENT</h5>
+                            <p>$120/month<br>(Minimum 3 mos commitment)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="about-trigger-wrapper">
+        <button class="about-trigger-btn" onclick="toggleAbout()">
+            <svg viewBox="0 0 24 24" class="about-icon"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <span>ABOUT ME</span>
+        </button>
+    </div>
+
+    <section class="about-section hidden" id="about-section" style="position: relative; overflow: hidden;">
+        <!-- Doodles -->
+        <svg class="about-doodle doodle-1" viewBox="0 0 100 100">
+            <path d="M50 10 Q50 50 10 50 Q50 50 50 90 Q50 50 90 50 Q50 50 50 10" />
+        </svg>
+        <svg class="about-doodle doodle-2" viewBox="0 0 200 50">
+            <path d="M 10 25 Q 30 10 50 25 T 90 25 T 130 25 T 170 25 T 210 25" />
+        </svg>
+        <svg class="about-doodle doodle-3" viewBox="0 0 100 100">
+            <path d="M10 50 C10 10, 90 10, 90 50 C90 80, 30 80, 30 50 C30 30, 70 30, 70 50" />
+        </svg>
+        <svg class="about-doodle doodle-4" viewBox="0 0 100 100">
+            <path d="M20 80 Q 50 20 80 20 M 60 20 L 80 20 L 80 40" />
+        </svg>
+
+        <div class="about-content" style="position: relative; z-index: 2;">
+            <h2 class="section-title" style="text-align: center; text-transform: uppercase; font-size: 3.5rem; letter-spacing: 4px; margin-bottom: 2rem; color: var(--text-color-light);">MEET ABBIGAIL:</h2>
+            <p style="text-align: center; margin-bottom: 5rem; font-family: var(--font-body); font-size: 1.3rem; font-weight: 300; font-style: italic; line-height: 1.6; color: var(--text-color-light);">
+                "I know what it feels like to want change.<br>
+                But more importantly, I know what it takes to create it!"
+            </p>
+
+            <div class="about-grid">
+                
+                <!-- About Me Image -->
+                <div class="about-card about-image-card" style="padding: 0; border: none; background-color: transparent; align-self: center; overflow: hidden; display: block; border-radius: 50%; aspect-ratio: 1/1;">
+                    <img src="images/about-me-1.jpg" alt="Abbigail Fitness Transformation" style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block;">
+                </div>
+
+                <!-- Story Card (Vertical on the right) -->
+                <div class="about-card" style="text-align: center; justify-content: center; align-items: center;">
+                    <h3 class="about-card-title" style="align-self: center;">MY JOURNEY</h3>
+                    <p>At my highest, I was around 190 lbs and knew I needed to take control of my health. By focusing on sustainable training, prioritizing my nutrition, and making real lifestyle changes, I successfully lost 70 lbs and built habits that actually stick. But the biggest transformation wasn't just physical—it completely leveled up my mindset, my confidence, and the way I approach my life!</p>
+                </div>
+
+                <!-- Mission, Approach & Background Card -->
+                <div class="about-card" style="text-align: center; justify-content: center; align-items: center;">
+                    <div style="margin-bottom: 2.5rem; display: flex; flex-direction: column; align-items: center;">
+                        <h3 class="about-card-title" style="align-self: center;">MY MISSION</h3>
+                        <p>I am completely dedicated to helping women build sustainable, confident lifestyles that they're truly proud of.</p>
+                    </div>
+                    <div style="margin-bottom: 2.5rem; display: flex; flex-direction: column; align-items: center;">
+                        <h3 class="about-card-title" style="align-self: center;">MY APPROACH</h3>
+                        <p>I don't believe in extremes or quick shortcuts. Instead, we focus on seamlessly combining targeted fitness, balanced nutrition, and overall wellness to secure real, long-term results!</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <h3 class="about-card-title" style="align-self: center;">BACKGROUND</h3>
+                            <p style="opacity: 0.8;">ISSA Certified Personal Trainer</p>
+                        </div>
+                        <img src="images/issa-logo.png" alt="ISSA Certified Personal Trainer" style="height: 60px; filter: invert(1) brightness(2);">
+                    </div>
+                </div>
+
+                <!-- Secondary About Me Image -->
+                <div class="about-card about-image-card" style="padding: 0; border: none; background-color: transparent; align-self: center; overflow: hidden; display: block; border-radius: 50%; aspect-ratio: 1/1;">
+                    <img src="images/about-me-2.jpg" alt="Abbigail Stasiuk Personal Trainer" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bg" style="background-image: url('images/back-hero.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="footer-overlay"></div>
+        <div class="footer-content">
+            <h2 class="footer-title">GET<br>ACTIVE</h2>
+            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf72g3XskOoSI2mPzw3Rd1dlx8DiKFmAgxVTg6_Kn3WwRZTGw/viewform" class="apply-btn">APPLY FOR 1:1 COACHING</a>
+            
+        </div>
+    </footer>
+
+    <!-- NEW CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-left">
+                <h2 class="contact-title">Contact me</h2>
+                <p class="contact-subtitle">Questions? Fill out some info and I will be in touch shortly.<br>I can't wait to hear from you!</p>
+            </div>
+            <div class="contact-right">
+                <form action="https://formsubmit.co/abbigailactive@gmail.com" method="POST" class="contact-form">
+                    <!-- Configures Formsubmit -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Coaching Inquiry!">
+                    
+                    <div class="form-group-name">
+                        <label class="main-label">Name:</label>
+                        <div class="name-inputs">
+                            <div class="input-col">
+                                <label for="first-name" class="sub-label">First Name <span class="req">(required)</span></label>
+                                <input type="text" id="first-name" name="First Name" required>
+                            </div>
+                            <div class="input-col">
+                                <label for="last-name" class="sub-label">Last Name <span class="req">(required)</span></label>
+                                <input type="text" id="last-name" name="Last Name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="main-label">Email <span class="req">(required)</span></label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="main-label">Message <span class="req">(required)</span></label>
+                        <textarea id="message" name="Message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" style="background-color: #000; color: #fff;">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showProgram(id) {
+            // Show the main container
+            const container = document.getElementById('programs-container');
+            container.classList.remove('hidden');
+
+            // Hide all program detail rows
+            const programs = document.querySelectorAll('.prog-detail-row');
+            programs.forEach(p => {
+                p.classList.add('hidden');
+            });
+
+            // Show the selected program row
+            const selected = document.getElementById(id);
+            if(selected) {
+                selected.classList.remove('hidden');
+                // Smooth scroll to the container
+                setTimeout(() => {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+
+        function closePrograms() {
+            document.getElementById('programs-container').classList.add('hidden');
+            document.getElementById('programs-overview').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleAbout() {
+            const aboutSec = document.getElementById('about-section');
+            if (aboutSec.classList.contains('hidden')) {
+                aboutSec.classList.remove('hidden');
+                setTimeout(() => {
+                    aboutSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 50);
+            } else {
+                aboutSec.classList.add('hidden');
+            }
+        }
+    </script>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer">
+        <a href="#" class="footer-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">ABBIGAILS ACTIVE</a>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/abbistasiuk/" target="_blank" class="footer-link">
+                <i class="fab fa-instagram" style="font-size: 1.2rem; margin-right: 0.3rem;"></i> @abbistasiuk
+            </a>
+            <a href="mailto:abbigailactive@gmail.com" class="footer-link">
+                <i class="far fa-envelope" style="font-size: 1.2rem; margin-right: 0.3rem;"></i> abbigailactive@gmail.com
+            </a>
+        </div>
+    </footer>
+
+    <!-- Floating Interactive Instagram Button -->
+    <a href="https://www.instagram.com/abbistasiuk/" target="_blank" class="floating-ig-btn">
+        <i class="fab fa-instagram"></i>
+    </a>
+</body>
+</html>
